@@ -1,0 +1,2 @@
+# exo_python_maths_1_annee
+exo_python_maths_1_annee
