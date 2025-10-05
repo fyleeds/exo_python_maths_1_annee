@@ -130,9 +130,11 @@ def exercice_1_8():
     while not pile_tiree:
         # On tire une pièce au hasard dans le sac en utilisant la methode choice de la librairie random importée en ligne 1
         piece_tiree = random.choice(piece)
+        print("DEBUG : Piece tirée avant d'obtenir pile 1ERE SERIE :", piece_tiree)
         # Si la pièce tirée est face, on incrémente le compteur
         if piece_tiree == piece_face:
             compteur_pour_pile += 1
+        print("DEBUG : Compteur de faces avant d'obtenir pile 1ERE SERIE :", compteur_pour_pile)
         # Si la pièce tirée est pile, on change le bool à True pour sortir de la boucle
         if piece_tiree == piece_pile:
             pile_tiree = True
