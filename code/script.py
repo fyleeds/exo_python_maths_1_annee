@@ -89,6 +89,29 @@ def exercice_1_6():
     # Retour du compteur de tirages
     return nb_tirages
 
+# Exercice 1.7 : (Mémoire d'une urne malmenée)
+# on réutilise la fonction exercice_1_6
+def exercice_1_7():
+    boules_rouges = "R"
+    boules_jaunes = "J"
+    boules_noires = "N"
+    # on multiplie chaque item de boules par leur nombre pour former un tableau
+    urne = [boules_rouges] * 6 + [boules_jaunes] * 3 + [boules_noires] * 1
+    # On initialise la liste des boules tirées à vide
+    boules_tirees = []
+    # On initialise un bool pour savoir si on a tiré la boule noire à False (pas encore tirée)
+    boule_noire_tiree = False
+    while not boule_noire_tiree:
+        # On tire une boule au hasard dans l'urne en utilisant la methode choice de la librairie random
+        boule_tiree = random.choice(urne)
+        # On ajoute la boule tirée à la liste des boules tirées
+        boules_tirees.append(boule_tiree)
+        # Si la boule tirée est noire, on change le bool à True pour sortir de la boucle
+        if boule_tiree == boules_noires:
+            boule_noire_tiree = True
+    # Retour de la liste des boules tirées
+    return boules_tirees
+
 # Defining main function
 def main():
     print(exercice_1_3())
@@ -97,6 +120,7 @@ def main():
     print(exercice_1_4_alt())
     print("Resultat exercice_1_5 avec n=5 :", exercice_1_5(5))
     print("Resultat exercice 1_6 compteur de boules tirées avant la noire :", exercice_1_6())
+    print("Resultat exercice 1_7 liste des boules tirées :", exercice_1_7())
 
 # Using the special variable 
 # __name__
