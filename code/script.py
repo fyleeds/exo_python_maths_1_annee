@@ -160,7 +160,7 @@ def exercice_1_9():
     # la méthode randint retourne un entier entre les deux bornes (0 et 10 ici)
     # on en créé 5 avec la liste de compréhension
     nb_aleatoires = [random.randint(0,10) for i in range(5)]
-    print ("Liste de nombres aléatoires de départ exercice_1_9 :", nb_aleatoires)
+    print ("Exercice_1_9 Liste de nombres aléatoires de départ  :", nb_aleatoires)
     # on parcoure la liste aléatoire pour trouver le maximum
     # on initialise le maximum avec le premier élément de la liste
     maximum = nb_aleatoires[0]
@@ -176,21 +176,21 @@ def exercice_1_9():
 def main():
     print("Début des exercices partie 1")
     print("\n")
-    print(exercice_1_3())
-    print(exercice_1_3_alt())
+    print("Exercice_1_3 une urne :", exercice_1_3())
+    print("Exercice_1_3 une urne alternative :", exercice_1_3_alt())
     print("\n")
-    print(exercice_1_4())
-    print(exercice_1_4_alt())
+    print("Exercice_1_4 un graphe  :", exercice_1_4())
+    print("Exercice_1_4 un graphe alternatif :", exercice_1_4_alt())
     print("\n")
-    print("Resultat exercice_1_5 avec n=5 :", exercice_1_5(5))
+    print("Exercice_1_5 Calcul somme  avec n=5 :", exercice_1_5(5))
     print("\n")
-    print("Resultat exercice 1_6 compteur de boules tirées avant la noire :", exercice_1_6())
+    print("Exercice 1_6 Compteur de boules tirées avant la noire :", exercice_1_6())
     print("\n")
-    print("Resultat exercice 1_7 liste des boules tirées :", exercice_1_7())
+    print("Exercice 1_7 Liste des boules tirées avant la noire (noire comprise) :", exercice_1_7())
     print("\n")
-    print("a=", exercice_1_8())
+    print("Exercice 1_8 : Compteur de pièces tirés avant de trouver face b=", exercice_1_8())
     print("\n")
-    print("Resultat exercice_1_9 maximum trouvé :", exercice_1_9())
+    print("Exercice 1_9 maximum trouvé :", exercice_1_9())
     print("\n")
 
 # Using the special variable 
