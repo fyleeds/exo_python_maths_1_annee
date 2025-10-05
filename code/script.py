@@ -79,7 +79,7 @@ def exercice_1_6():
     # On initialise un bool pour savoir si on a tiré la boule noire à False (pas encore tirée)
     boule_noire_tiree = False
     while not boule_noire_tiree:
-        # On tire une boule au hasard dans l'urne en utilisant la methode choice de la librairie random
+        # On tire une boule au hasard dans l'urne en utilisant la methode choice de la librairie random importée en ligne 1
         boule_tiree = random.choice(urne)
         # On incrémente le nombre de tirages
         nb_tirages += 1
@@ -102,7 +102,7 @@ def exercice_1_7():
     # On initialise un bool pour savoir si on a tiré la boule noire à False (pas encore tirée)
     boule_noire_tiree = False
     while not boule_noire_tiree:
-        # On tire une boule au hasard dans l'urne en utilisant la methode choice de la librairie random
+        # On tire une boule au hasard dans l'urne en utilisant la methode choice de la librairie random importée en ligne 1
         boule_tiree = random.choice(urne)
         # On ajoute la boule tirée à la liste des boules tirées
         boules_tirees.append(boule_tiree)
