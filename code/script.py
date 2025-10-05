@@ -86,7 +86,6 @@ def exercice_1_6():
         # Si la boule tirée est noire, on change le bool à True pour sortir de la boucle
         if boule_tiree == boules_noires:
             boule_noire_tiree = True
-            print("Boule noire tirée après", nb_tirages, "tirages.")
     # Retour du compteur de tirages
     return nb_tirages
 
@@ -97,7 +96,7 @@ def main():
     print(exercice_1_4())
     print(exercice_1_4_alt())
     print("Resultat exercice_1_5 avec n=5 :", exercice_1_5(5))
-    print(("Resultat exercice 1_6compteur de boules tirées avant la noire :", exercice_1_6()))
+    print("Resultat exercice 1_6 compteur de boules tirées avant la noire :", exercice_1_6())
 
 # Using the special variable 
 # __name__
