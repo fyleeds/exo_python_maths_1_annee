@@ -153,6 +153,24 @@ def exercice_1_8():
     # Retour de la liste des pièces tirées
     return compteur_pour_face
 
+# Exercice 1.9 : (à la recherche du maximum)
+def exercice_1_9():
+    # Cette fonction n'utilise pas la méthode max de python
+    # Initialisation d'une liste 
+    # la méthode randint retourne un entier entre les deux bornes (0 et 10 ici)
+    # on en créé 5 avec la liste de compréhension
+    nb_aleatoires = [random.randint(0,10) for i in range(5)]
+    print ("Liste de nombres aléatoires de départ exercice_1_9 :", nb_aleatoires)
+    # on parcoure la liste aléatoire pour trouver le maximum
+    # on initialise le maximum avec le premier élément de la liste
+    maximum = nb_aleatoires[0]
+    # on parcoure la liste à partir du deuxième élément
+    for i in range(1,len(nb_aleatoires)):
+        # si l'élément courant est plus grand que le maximum, on met à jour le maximum
+        if nb_aleatoires[i] > maximum:
+            maximum = nb_aleatoires[i]
+    # on retourne le maximum trouvé
+    return maximum
 
 # Defining main function
 def main():
@@ -164,6 +182,7 @@ def main():
     print("Resultat exercice 1_6 compteur de boules tirées avant la noire :", exercice_1_6())
     print("Resultat exercice 1_7 liste des boules tirées :", exercice_1_7())
     print("a=", exercice_1_8())
+    print("Resultat exercice_1_9 maximum trouvé :", exercice_1_9())
 
 # Using the special variable 
 # __name__
