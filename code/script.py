@@ -10,7 +10,7 @@ def exercice_1_3():
     # Retour de la fonction
     return urne
 
-#Exercice 1.3 : L'urne
+#Exercice 1.3 : L'urne (version alternative) (string)
 def exercice_1_3_alt():
     # Initialisation des chaines de boules
     # ici la première lettre de chaque couleur suffit
@@ -18,7 +18,7 @@ def exercice_1_3_alt():
     boules_jaunes = "J"
     boules_noires = "N"
     # on multiplie chaque item de boules par leur nombre pour former un tableau
-    urne = [boules_rouges] * 6 + [boules_jaunes] * 3 + [boules_noires] * 1
+    urne = boules_rouges * 6 + boules_jaunes * 3 + boules_noires * 1
     # Retour de la fonction
     return urne
 
@@ -63,7 +63,9 @@ def exercice_1_5(n):
 # Defining main function
 def main():
     print(exercice_1_3())
+    print(exercice_1_3_alt())
     print(exercice_1_4())
+    print(exercice_1_4_alt())
     print("Resultat exercice_1_5 avec n=5 :", exercice_1_5(5))
 
 # Using the special variable 
