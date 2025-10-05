@@ -1,3 +1,5 @@
+import random
+
 #Exercice 1.3 : L'urne
 def exercice_1_3():
     # Initialisation des chaines de boules
@@ -59,6 +61,34 @@ def exercice_1_5(n):
         total += term
     return total
 
+#Exercice 1.6 : En attendant la boule noire
+def exercice_1_6():
+    # !!!!!!!!!!
+    # Cette fonction necessite la librairie random importée en ligne 1
+    # !!!!!!!!!!
+    
+    # Initialisation des chaines de boules
+    # ici la première lettre de chaque couleur suffit
+    boules_rouges = "R"
+    boules_jaunes = "J"
+    boules_noires = "N"
+    # on multiplie chaque item de boules par leur nombre pour former un tableau
+    urne = [boules_rouges] * 6 + [boules_jaunes] * 3 + [boules_noires] * 1
+    # On initialise un int pour compter le nombre de tirages à 0
+    nb_tirages = 0
+    # On initialise un bool pour savoir si on a tiré la boule noire à False (pas encore tirée)
+    boule_noire_tiree = False
+    while not boule_noire_tiree:
+        # On tire une boule au hasard dans l'urne en utilisant la methode choice de la librairie random
+        boule_tiree = random.choice(urne)
+        # On incrémente le nombre de tirages
+        nb_tirages += 1
+        # Si la boule tirée est noire, on change le bool à True pour sortir de la boucle
+        if boule_tiree == boules_noires:
+            boule_noire_tiree = True
+            print("Boule noire tirée après", nb_tirages, "tirages.")
+    # Retour du compteur de tirages
+    return nb_tirages
 
 # Defining main function
 def main():
@@ -67,6 +97,7 @@ def main():
     print(exercice_1_4())
     print(exercice_1_4_alt())
     print("Resultat exercice_1_5 avec n=5 :", exercice_1_5(5))
+    print(("Resultat exercice 1_6compteur de boules tirées avant la noire :", exercice_1_6()))
 
 # Using the special variable 
 # __name__
