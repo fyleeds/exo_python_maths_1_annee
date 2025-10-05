@@ -112,6 +112,48 @@ def exercice_1_7():
     # Retour de la liste des boules tirées
     return boules_tirees
 
+#Exercice 1.8 : (Les deux pièces)
+def exercice_1_8():
+    # !!!!!!!!!!
+    # Cette fonction necessite la librairie random importée en ligne 1
+    # !!!!!!!!!!
+    # Initialisation des chaines de pièces
+    piece_face = "F"
+    piece_pile = "P"
+    # piece sous forme de tableau 
+    piece = [piece_face, piece_pile]
+    # PREMIERE SERIE : 
+    # Initialisation du compteur piles à 0
+    compteur_pour_pile = 0
+    # On initialise un bool pour savoir si on a tiré Pile à False (pas encore tirée)
+    pile_tiree = False
+    while not pile_tiree:
+        # On tire une pièce au hasard dans le sac en utilisant la methode choice de la librairie random importée en ligne 1
+        piece_tiree = random.choice(piece)
+        # Si la pièce tirée est face, on incrémente le compteur
+        if piece_tiree == piece_face:
+            compteur_pour_pile += 1
+        # Si la pièce tirée est pile, on change le bool à True pour sortir de la boucle
+        if piece_tiree == piece_pile:
+            pile_tiree = True
+    # Deuxième SERIE :
+    # Initialisation du compteur piles à 0
+    compteur_pour_face = 0
+    # On initialise un bool pour savoir si on a tiré Face à False (pas encore tirée)
+    face_tiree = False
+    while not face_tiree:
+        # On tire une pièce au hasard dans le sac en utilisant la methode choice de la librairie random importée en ligne 1
+        piece_tiree = random.choice(piece)
+        # Si la pièce tirée est face, on incrémente le compteur
+        if piece_tiree == piece_pile:
+            compteur_pour_face += 1
+        # Si la pièce tirée est face, on change le bool à True pour sortir de la boucle
+        if piece_tiree == piece_face:
+            face_tiree = True
+    # Retour de la liste des pièces tirées
+    return compteur_pour_face
+
+
 # Defining main function
 def main():
     print(exercice_1_3())
