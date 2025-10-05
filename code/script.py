@@ -174,15 +174,24 @@ def exercice_1_9():
 
 # Defining main function
 def main():
+    print("Début des exercices partie 1")
+    print("\n")
     print(exercice_1_3())
     print(exercice_1_3_alt())
+    print("\n")
     print(exercice_1_4())
     print(exercice_1_4_alt())
+    print("\n")
     print("Resultat exercice_1_5 avec n=5 :", exercice_1_5(5))
+    print("\n")
     print("Resultat exercice 1_6 compteur de boules tirées avant la noire :", exercice_1_6())
+    print("\n")
     print("Resultat exercice 1_7 liste des boules tirées :", exercice_1_7())
+    print("\n")
     print("a=", exercice_1_8())
+    print("\n")
     print("Resultat exercice_1_9 maximum trouvé :", exercice_1_9())
+    print("\n")
 
 # Using the special variable 
 # __name__
