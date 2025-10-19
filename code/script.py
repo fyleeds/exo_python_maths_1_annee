@@ -172,6 +172,18 @@ def exercice_1_9():
     # on retourne le maximum trouvé
     return maximum
 
+# Exercice 1.10 : (Suite de syracuse)
+def exercice_1_10():
+    # Initialisation du N de départ avec un nombre random
+    # la méthode randint retourne un entier entre les deux bornes (0 et 10 ici)
+    N = random.randint(0,10)
+    print ("Exercice_1_10 N de départ :", N)
+    # Calcul du premier terme de la suite de rang 1
+    resultat_suite = 3*N + 1
+    # on retourne le résultat de la suite
+    # ici on ne fait qu'un seul calcul pour le premier terme alors que l'énoncé donne pour la suite n pair alors que ce n'est pas demandé
+    return resultat_suite
+
 # Defining main function
 def main():
     print("Début des exercices partie 1")
@@ -192,6 +204,9 @@ def main():
     print("\n")
     print("Exercice 1_9 maximum trouvé :", exercice_1_9())
     print("\n")
+    print("Exercice 1_10 résultat de la suite (rang 1):", exercice_1_10())
+    print("\n")
+
 
 # Using the special variable 
 # __name__
